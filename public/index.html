@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="shortcut icon" href="/icon/sorting.png" type="image/x-icon">
+</head>
+
+<body class="contianer">
+
+    <nav class="navbar is-primary nav" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <h1 class="title is-4 has-text-centered navbar-item">Sorting Visualizer</h1>
+
+        </div>
+    </nav>
+    <p class="has-text-centered">Select the algorithm, input size and the speed</p>
+
+    <div class="content-container">
+        <div class="controller">
+            <div>
+                <button id="generator" class="button is-primary is-fullwidth">Generate Array</button>
+            </div>
+
+            <div>
+                <div class="dropdown ">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                            <span class="selected-algo">Sorting Algorithms</span>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                        <div class="dropdown-content">
+                            <a class="dropdown-item" id="BS">Bubble Sort</a>
+                            <a class="dropdown-item" id="IS">Insertion Sort</a>
+                            <a class="dropdown-item" id="SS">Selection Sort</a>
+                            <a class="dropdown-item" id="MS">Merge Sort</a>
+                            <a class="dropdown-item" id="QS">Quick Sort</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pad">
+                <label for="size">Select Input size</label>
+                <input type="range" name="size" id="size" min="20" max="200">
+            </div>
+
+            <div class="pad">
+                <label for="speed">Select Delay</label>
+                <input type="range" name="speed" id="speed" min="0" max="500" step="100">
+            </div>
+
+            <div>
+                <button id="color" class="button is-info is-fullwidth">Sort Input</button>
+            </div>
+
+            <div>
+                <button id="stop" class="button is-danger is-fullwidth">Stop</button>
+            </div>
+
+        </div>
+        <div class="content"></div>
+    </div>
+
+
+
+
+
+</body>
+
+<script src="/js/app.js"></script>
+<script src="/js/algorithms.js"></script>
+
+
+
+</html>
